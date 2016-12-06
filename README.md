@@ -10,6 +10,6 @@ EduCosts is a data analytics tool to aid international students interested in pu
 
 ##Tools Used
 * HTML, CSS, Javascript with frameworks such as Plotly.JS for front-end.
-* PHP and mySQL for back-end.
+* LAMP stack (Linux, Apache, MySQL, and PHP) for back-end.
 
 ##Workflow
