@@ -6,4 +6,10 @@ EduCosts is a data analytics tool to aid international students interested in pu
 * HTML, CSS, Javascript with frameworks such as Plotly.JS for front-end.
 * PHP and mySQL for back-end.
 
+##Data Analytics/Visualizations
+* Avg wage/Avg College Cost comparison of countries with US.
+* Min, max and average wages for subject clusters.
+* Comparison of two individual Majors in terms of Entry-level and Median salary.
+* Comparison of two individual Universities in terms of rank, tuition, etc.
+
 ##Workflow
