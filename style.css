@@ -1,0 +1,60 @@
+@media (min-device-width: 650px) {
+#info {
+padding:15px;
+margin: 50px;
+}
+}
+
+@media (max-width: -device-width: 650px) {
+#info {
+padding:5px;
+margin: 5px;
+}
+#mydiv, #mydivx2 {
+  display: flex!important;
+}
+}
+
+#info {
+  align-content: center;
+  color:black;
+  font-size: 14px;
+  font-family: 'Georgia';
+  line-height: 160%;
+  border:dotted 2px grey;
+  background: white;
+  opacity: 0.9;
+  min-height: 500px;
+  height: initial;
+  min-width: 580px;
+  overflow: auto;
+}
+
+#view5, #view4 {
+  min-height: 400px;
+}
+#table1{
+  margin: auto;
+  text-align: center;
+  overflow: auto;
+}
+
+#view4{
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;   
+    flex-wrap: wrap;
+}
+
+#mydivx{
+  overflow: auto;
+}
+
+body {
+  background-image: url("pexels-photo.jpg");
+  background-size: stretch;
+}
+
+form {
+  text-align: center;
+}
