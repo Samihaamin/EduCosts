@@ -13,4 +13,6 @@ EduCosts is a data analytics tool to aid international students interested in pu
 * LAMP stack (Linux, Apache, MySQL, and PHP) for back-end.
 
 ##Workflow
+
+
 ![alt tag](https://github.com/Samihaamin/EduCosts/raw/master/Workflow.png)
