@@ -18,7 +18,6 @@
   if($conn->connect_error){
     die("Connection failed: " . $conn->connect_error);
   }
-
 ?>
 
 <head>
@@ -31,7 +30,8 @@
 
 </head>
 <body>
-
+	
+	
  <div id="info">
      <center><img src="logo.png" style="width:128px;height:26px;"></center>
      <br>
@@ -44,6 +44,8 @@
 	</ul>
 
 <script type = "text/javascript">
+	
+	
 
 function countryGraph(avgWage = 0, avgCost = 0, country = "Country"){
 
@@ -68,6 +70,8 @@ function countryGraph(avgWage = 0, avgCost = 0, country = "Country"){
 
   Plotly.newPlot('myDivx2', data, layout);
 }
+	
+	
 
 function concentrationGraph(ngMax = 0, mMax = 0, ngMin = 0, mMin = 0, ngAvg = 0, mAvg = 0){
   var trace3 = {
@@ -107,6 +111,8 @@ var layout = {title: 'Salary Statistics per Subject Area'};
 Plotly.newPlot('myDiv', data, layout);
 }
 
+	
+	
 
 function majorGraph(ngM1 = 0, mM1 = 0, ngM2 = 0, mM2 = 0, m1 = "Major 1", m2 = "Major 2"){
     var trace1 = {
@@ -163,15 +169,14 @@ var data = [trace1, trace2, trace3, trace4, trace5];
 Plotly.newPlot('myDivx', data);
 }
 
+	
+	
 function showInsight(){
 
   var counList = document.getElementById("insightCountry");
   var country = counList.options[counList.selectedIndex].value;
   var conList = document.getElementById("insightConcentration");
   var concentration = conList.options[conList.selectedIndex].value;
-
-
-
 
   if(country.length != 0){
     if(window.XMLHttpRequest){
@@ -207,10 +212,10 @@ function showInsight(){
     xmlhttp.open("GET", "concentrationGraph.php?c=" + encodeURIComponent(concentration), true);
     xmlhttp.send();
   }
-
-
 }
 
+	
+	
 function showGraph(){
 
   var m1List = document.getElementById("Major 1");
@@ -239,6 +244,10 @@ function showGraph(){
 </script>
 
 
+	 
+	 
+	 
+	 
 
 <div class="tabcontents">
 <div id="view1">
@@ -246,15 +255,7 @@ function showGraph(){
 <div>
 <form name = "insight" action="JavaScript:showInsight()" method="get">
 Get Insight:
-<!--   <select id="insightUniversity">
-        <option value="">Pick University..</option>
-    <?php
-      /*$sql = mysqli_query($conn, "SELECT university_name FROM InternationalCollegeCosts.University_Country WHERE country = \"United States of America\" ORDER BY university_name");
-      while($row = $sql->fetch_assoc()){
-        echo "<option value = \"". $row['university_name']."\">" . $row['university_name'] . "</option>";
-      }*/
-    ?>
-  </select> -->
+	
     <select id="insightCountry">
           <option value="">Pick Country..</option>
     <?php
@@ -263,6 +264,7 @@ Get Insight:
         echo "<option value = \"".$row['Location']."\">" . $row['Location'] . "</option>";
       }
     ?>
+	    
   </select>
       <select id="insightConcentration">
             <option value="">Pick Concentration..</option>
@@ -275,30 +277,21 @@ Get Insight:
     <option value ="Physical/Life Sciences">Life Sciences</option>
     <option value ="Social Sciences">Social Sciences</option>
   </select>
+	
   <input type="submit"></input>
 </form> 
+	
 <center>
 <div id="myDivx2" style="width: 400px; height: 400px; display: inline-block;"></div>
 
-<script>
-
-  countryGraph();
-
-</script>
+<script> countryGraph(); </script>
 
 <div id="myDiv" style="width: 400px; height: 400px; display: inline-block;"></div>
 </center>
 
-<script>
-
-  concentrationGraph();
-
-</script>
-
-
+<script> concentrationGraph(); </script>
 
 </div>
-
 </div>
 
 <div id="view2">
@@ -306,37 +299,38 @@ Get Insight:
 Pick Majors:
   <select id="Major 1">
       <option value="">Pick First Major..</option>
+	  
     <?php
       $sql = mysqli_query($conn, "SELECT Major FROM InternationalCollegeCosts.MajorSalary ORDER BY Major");
       while($row = $sql->fetch_assoc()){
         echo "<option value = \"".$row['Major']."\">" . $row['Major'] . "</option>";
       }
     ?>
+	  
   </select>
     <select id="Major 2">
           <option value="">Pick Second Major..</option>
+	    
     <?php
       $sql = mysqli_query($conn, "SELECT Major FROM InternationalCollegeCosts.MajorSalary ORDER BY Major");
       while($row = $sql->fetch_assoc()){
         echo "<option value = \"".$row['Major']."\">" . $row['Major'] . "</option>";
       }
     ?>
+	    
   </select>
   <input type="submit"></input>
 </form>
  
  <center><div id="myDivx" style="width: 600px; height: 400px; display: inline-block;"></div></center>
 
-  <script>
-
-  majorGraph();
-
-  </script>
-
+  <script> majorGraph(); </script>
   </div>
 
-
-
+	
+	
+	
+	
 <div id="view4">
 
 <script type = "text/javascript">
@@ -366,12 +360,13 @@ function showUnivs(){
   }
 }
 </script>
-
+	
 <div>
     <form name = "UniversityCompare" action = "JavaScript:showUnivs()" method = "get">
     Pick Universities:
   <select id="University1">
         <option value="">Pick First University..</option>
+	  
     <?php
       $sql = mysqli_query($conn, "SELECT university_name FROM InternationalCollegeCosts.Universities ORDER BY university_name");
 
@@ -379,15 +374,18 @@ function showUnivs(){
         echo "<option value = \"".$row['university_name']."\">" . $row['university_name'] . "</option>";
       }
     ?>
+	  
   </select>
     <select id="University2">
     <option value="">Pick Second University..</option>
+	    
     <?php
       $sql = mysqli_query($conn, "SELECT university_name FROM InternationalCollegeCosts.Universities ORDER BY university_name");
       while($row = $sql->fetch_assoc()){
         echo "<option value = \"".$row['university_name']."\">" . $row['university_name'] . "</option>";
       }
     ?>
+	    
   </select>
   <input type="submit"></input>
 </form>
@@ -396,11 +394,11 @@ function showUnivs(){
 <br>
 <br>
 <center><div id = "table1" style = "width:780px;">Please select two Universities to compare.</div></center>
-
   </div>
-
-
 </div>
+
+
+
 
 <div id="view5">
 
