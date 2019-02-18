@@ -1,5 +1,7 @@
 # EduCosts
 
+UPDATE (feb 2019): The site is no longer online.
+
 EduCosts is a data analytics tool to aid international students interested in pursuing tertiary US education in making more informed financial decisions, in terms of picking Majors and Universities.
 
 ##Data Analytics/Visualizations
